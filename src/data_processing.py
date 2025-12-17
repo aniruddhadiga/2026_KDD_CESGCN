@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('CDC_DATA/target-hospital-admissions_20251206.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/cdcepi/FluSight-forecast-hub/main/target-data/target-hospital-admissions.csv')
 removable = ['US']
 df['date'] = pd.to_datetime(df['date']).dt.date
 df = df[~df['location'].isin(removable)]
